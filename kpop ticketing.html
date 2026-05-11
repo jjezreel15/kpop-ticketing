@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Pop Concert Tickets - Book Your Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="kpop-ticketing.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-music"></i> K-Pop Tickets
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#concerts">Concerts</a></li>
+                <li><a href="#artists">Artists</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Experience K-Pop Live</h1>
+                <p class="hero-subtitle">Book tickets to the hottest K-Pop concerts and events</p>
+                <div class="hero-actions">
+                    <a href="#concerts" class="btn btn-primary">Browse Concerts</a>
+                    <a href="#booking" class="btn btn-secondary">Quick Book</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Concerts -->
+    <section id="concerts" class="concerts-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Concerts</h2>
+            <div class="concerts-grid">
+                <div class="concert-card">
+                    <div class="concert-image">
+                        <img src="bts.jpg" alt="BTS World Tour">
+                        <div class="concert-badge">Hot</div>
+                    </div>
+                    <div class="concert-info">
+                        <h3>BTS World Tour 2024</h3>
+                        <div class="concert-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 15, 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Seoul Olympic Stadium</span>
+                        </div>
+                        <p>Experience the magic of BTS live in concert with their greatest hits and new releases.</p>
+                        <div class="concert-price">
+                            <span class="price-label">From</span>
+                            <span class="price-amount">$89</span>
+                        </div>
+                        <button class="btn btn-concert" onclick="openBookingModal('BTS World Tour 2024', 'Dec 15, 2024', 'Seoul Olympic Stadium', 89)">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-image">
+                        <img src="blackpink.jpg" alt="BLACKPINK Concert">
+                        <div class="concert-badge">VIP</div>
+                    </div>
+                    <div class="concert-info">
+                        <h3>BLACKPINK "Born Pink" Tour</h3>
+                        <div class="concert-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 20, 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Tokyo Dome</span>
+                        </div>
+                        <p>Join BLACKPINK for an unforgettable night of performances and spectacular stage production.</p>
+                        <div class="concert-price">
+                            <span class="price-label">From</span>
+                            <span class="price-amount">$125</span>
+                        </div>
+                        <button class="btn btn-concert" onclick="openBookingModal('BLACKPINK Born Pink Tour', 'Dec 20, 2024', 'Tokyo Dome', 125)">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-image">
+                        <img src="twice.jpg" alt="TWICE World Tour">
+                        <div class="concert-badge">New</div>
+                    </div>
+                    <div class="concert-info">
+                        <h3>TWICE "Ready To Be" World Tour</h3>
+                        <div class="concert-meta">
+                            <span><i class="fas fa-calendar"></i> Jan 5, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Singapore Indoor Stadium</span>
+                        </div>
+                        <p>Experience the energy and charm of TWICE with their latest world tour performances.</p>
+                        <div class="concert-price">
+                            <span class="price-label">From</span>
+                            <span class="price-amount">$75</span>
+                        </div>
+                        <button class="btn btn-concert" onclick="openBookingModal('TWICE Ready To Be Tour', 'Jan 5, 2025', 'Singapore Indoor Stadium', 75)">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-image">
+                        <img src="straykids.jpg" alt="Stray Kids Concert">
+                        <div class="concert-badge">Limited</div>
+                    </div>
+                    <div class="concert-info">
+                        <h3>Stray Kids "Maniac" Tour</h3>
+                        <div class="concert-meta">
+                            <span><i class="fas fa-calendar"></i> Jan 12, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Bangkok Arena</span>
+                        </div>
+                        <p>Witness the powerful performances and unique concepts of Stray Kids live on stage.</p>
+                        <div class="concert-price">
+                            <span class="price-label">From</span>
+                            <span class="price-amount">$95</span>
+                        </div>
+                        <button class="btn btn-concert" onclick="openBookingModal('Stray Kids Maniac Tour', 'Jan 12, 2025', 'Bangkok Arena', 95)">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-image">
+                        <img src="newjeans.jpg" alt="NewJeans Debut">
+                        <div class="concert-badge">Debut</div>
+                    </div>
+                    <div class="concert-info">
+                        <h3>NewJeans "Get Up" Showcase</h3>
+                        <div class="concert-meta">
+                            <span><i class="fas fa-calendar"></i> Jan 20, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Seoul World Cup Stadium</span>
+                        </div>
+                        <p>Be part of NewJeans' first major showcase with fresh performances and special stages.</p>
+                        <div class="concert-price">
+                            <span class="price-label">From</span>
+                            <span class="price-amount">$65</span>
+                        </div>
+                        <button class="btn btn-concert" onclick="openBookingModal('NewJeans Get Up Showcase', 'Jan 20, 2025', 'Seoul World Cup Stadium', 65)">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-image">
+                        <img src="seventeen1.jpg" alt="SEVENTEEN Concert">
+                        <div class="concert-badge">Popular</div>
+                    </div>
+                    <div class="concert-info">
+                        <h3>SEVENTEEN "Follow" Tour</h3>
+                        <div class="concert-meta">
+                            <span><i class="fas fa-calendar"></i> Feb 1, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Manila Arena</span>
+                        </div>
+                        <p>Join SEVENTEEN for an incredible night with 13 members delivering powerful performances.</p>
+                        <div class="concert-price">
+                            <span class="price-label">From</span>
+                            <span class="price-amount">$110</span>
+                        </div>
+                        <button class="btn btn-concert" onclick="openBookingModal('SEVENTEEN Follow Tour', 'Feb 1, 2025', 'Manila Arena', 110)">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-image">
+                        <img src="exo.jpeg" alt="EXO Comeback Tour">
+                        <div class="concert-badge">Comeback</div>
+                    </div>
+                    <div class="concert-info">
+                        <h3>EXO "Exist" Tour</h3>
+                        <div class="concert-meta">
+                            <span><i class="fas fa-calendar"></i> Feb 10, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> KSPO Dome, Seoul</span>
+                        </div>
+                        <p>Witness the powerful comeback of EXO with their signature synchronized performances and vocal harmonies.</p>
+                        <div class="concert-price">
+                            <span class="price-label">From</span>
+                            <span class="price-amount">$105</span>
+                        </div>
+                        <button class="btn btn-concert" onclick="openBookingModal('EXO Exist Tour', 'Feb 10, 2025', 'KSPO Dome, Seoul', 105)">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="concert-card">
+                    <div class="concert-image">
+                        <img src="nct.jpg" alt="NCT Nation Tour">
+                        <div class="concert-badge">Nation</div>
+                    </div>
+                    <div class="concert-info">
+                        <h3>NCT "NCT NATION" Tour</h3>
+                        <div class="concert-meta">
+                            <span><i class="fas fa-calendar"></i> Feb 15, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Gocheok Sky Dome</span>
+                        </div>
+                        <p>Experience the massive NCT universe with all units performing together in one spectacular show.</p>
+                        <div class="concert-price">
+                            <span class="price-label">From</span>
+                            <span class="price-amount">$95</span>
+                        </div>
+                        <button class="btn btn-concert" onclick="openBookingModal('NCT NATION Tour', 'Feb 15, 2025', 'Gocheok Sky Dome', 95)">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artists Section -->
+    <section id="artists" class="artists-section">
+        <div class="container">
+            <h2 class="section-title">Featured Artists</h2>
+            <div class="artists-grid">
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="bts.jpg" alt="BTS">
+                    </div>
+                    <h3>BTS</h3>
+                    <p>World's biggest boyband with record-breaking hits and global influence.</p>
+                    <div class="artist-stats">
+                        <span><i class="fas fa-users"></i> 50M+ Fans</span>
+                        <span><i class="fas fa-award"></i> 300+ Awards</span>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="blackpink.jpg" alt="BLACKPINK">
+                    </div>
+                    <h3>BLACKPINK</h3>
+                    <p>Global girl group known for powerful performances and fashion influence.</p>
+                    <div class="artist-stats">
+                        <span><i class="fas fa-users"></i> 35M+ Fans</span>
+                        <span><i class="fas fa-award"></i> 150+ Awards</span>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="twice.jpg" alt="TWICE">
+                    </div>
+                    <h3>TWICE</h3>
+                    <p>Nation's girl group with catchy songs and charming personalities.</p>
+                    <div class="artist-stats">
+                        <span><i class="fas fa-users"></i> 25M+ Fans</span>
+                        <span><i class="fas fa-award"></i> 200+ Awards</span>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="straykids.jpg" alt="Stray Kids">
+                    </div>
+                    <h3>Stray Kids</h3>
+                    <p>Rising powerhouse known for self-produced music and unique concepts.</p>
+                    <div class="artist-stats">
+                        <span><i class="fas fa-users"></i> 20M+ Fans</span>
+                        <span><i class="fas fa-award"></i> 100+ Awards</span>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="exo.jpeg" alt="EXO">
+                    </div>
+                    <h3>EXO</h3>
+                    <p>Legendary SM Entertainment group known for powerful vocals and synchronized performances.</p>
+                    <div class="artist-stats">
+                        <span><i class="fas fa-users"></i> 30M+ Fans</span>
+                        <span><i class="fas fa-award"></i> 250+ Awards</span>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="nct.jpg" alt="NCT">
+                    </div>
+                    <h3>NCT</h3>
+                    <p>Neo Culture Technology with multiple units creating diverse music and performances.</p>
+                    <div class="artist-stats">
+                        <span><i class="fas fa-users"></i> 28M+ Fans</span>
+                        <span><i class="fas fa-award"></i> 180+ Awards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2 class="section-title">Quick Booking</h2>
+            <div class="booking-form-container">
+                <div class="booking-form">
+                    <h3>Reserve Your Tickets</h3>
+                    <form id="quickBookingForm">
+                        <div class="form-group">
+                            <label for="concert-select">Select Concert</label>
+                            <select id="concert-select" required>
+                                <option value="">Choose a concert...</option>
+                                <option value="bts">BTS World Tour 2024 - $89</option>
+                                <option value="blackpink">BLACKPINK Born Pink Tour - $125</option>
+                                <option value="twice">TWICE Ready To Be Tour - $75</option>
+                                <option value="straykids">Stray Kids Maniac Tour - $95</option>
+                                <option value="newjeans">NewJeans Get Up Showcase - $65</option>
+                                <option value="seventeen">SEVENTEEN Follow Tour - $110</option>
+                                <option value="exo">EXO Exist Tour - $105</option>
+                                <option value="nct">NCT NATION Tour - $95</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ticket-quantity">Number of Tickets</label>
+                                <input type="number" id="ticket-quantity" min="1" max="10" value="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ticket-type">Ticket Type</label>
+                                <select id="ticket-type" required>
+                                    <option value="general">General Admission</option>
+                                    <option value="vip">VIP</option>
+                                    <option value="premium">Premium</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customer-name">Full Name</label>
+                            <input type="text" id="customer-name" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customer-email">Email Address</label>
+                            <input type="email" id="customer-email" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customer-phone">Phone Number</label>
+                            <input type="tel" id="customer-phone" placeholder="+1234567890" required>
+                        </div>
+
+                        <div class="booking-summary">
+                            <h4>Booking Summary</h4>
+                            <div class="summary-item">
+                                <span>Concert:</span>
+                                <span id="summary-concert">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Tickets:</span>
+                                <span id="summary-tickets">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Type:</span>
+                                <span id="summary-type">-</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>Total Price:</span>
+                                <span id="summary-total">$0</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Complete Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <p>Have questions about your booking? Need help with ticket purchases? We're here to help!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1-800-KPOP-123</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@kpop-tickets.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24/7 Customer Support</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 K-Pop Tickets. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBookingModal()">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalConcertName">Concert Name</h2>
+                <p id="modalConcertDetails">Date & Venue</p>
+            </div>
+            <div class="modal-body">
+                <div class="seat-selection">
+                    <h3>Select Your Seats</h3>
+                    <div class="stage">
+                        <div class="stage-label">STAGE</div>
+                    </div>
+                    <div class="seat-map">
+                        <div class="seat-section vip-section">
+                            <div class="section-label">VIP ($250)</div>
+                            <div class="seats-row">
+                                <div class="seat available" onclick="toggleSeat(this, 250)">A1</div>
+                                <div class="seat available" onclick="toggleSeat(this, 250)">A2</div>
+                                <div class="seat available" onclick="toggleSeat(this, 250)">A3</div>
+                                <div class="seat taken">A4</div>
+                                <div class="seat available" onclick="toggleSeat(this, 250)">A5</div>
+                                <div class="seat available" onclick="toggleSeat(this, 250)">A6</div>
+                            </div>
+                        </div>
+                        <div class="seat-section premium-section">
+                            <div class="section-label">Premium ($150)</div>
+                            <div class="seats-row">
+                                <div class="seat available" onclick="toggleSeat(this, 150)">B1</div>
+                                <div class="seat available" onclick="toggleSeat(this, 150)">B2</div>
+                                <div class="seat taken">B3</div>
+                                <div class="seat available" onclick="toggleSeat(this, 150)">B4</div>
+                                <div class="seat available" onclick="toggleSeat(this, 150)">B5</div>
+                                <div class="seat available" onclick="toggleSeat(this, 150)">B6</div>
+                            </div>
+                        </div>
+                        <div class="seat-section general-section">
+                            <div class="section-label">General ($89)</div>
+                            <div class="seats-row">
+                                <div class="seat available" onclick="toggleSeat(this, 89)">C1</div>
+                                <div class="seat available" onclick="toggleSeat(this, 89)">C2</div>
+                                <div class="seat available" onclick="toggleSeat(this, 89)">C3</div>
+                                <div class="seat available" onclick="toggleSeat(this, 89)">C4</div>
+                                <div class="seat available" onclick="toggleSeat(this, 89)">C5</div>
+                                <div class="seat available" onclick="toggleSeat(this, 89)">C6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-details">
+                    <h3>Booking Details</h3>
+                    <div class="selected-seats">
+                        <strong>Selected Seats:</strong>
+                        <span id="selectedSeatsDisplay">None</span>
+                    </div>
+                    <div class="total-price">
+                        <strong>Total Price:</strong>
+                        <span id="modalTotalPrice">$0</span>
+                    </div>
+                    <form id="modalBookingForm">
+                        <div class="form-group">
+                            <label for="modal-name">Full Name</label>
+                            <input type="text" id="modal-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-email">Email</label>
+                            <input type="email" id="modal-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-phone">Phone</label>
+                            <input type="tel" id="modal-phone" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Booking Successful!</h2>
+            <p id="successMessage">Your tickets have been reserved successfully.</p>
+            <button class="btn btn-primary" onclick="closeSuccessModal()">Done</button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        }
+
+        document.getElementById('mobileMenuBtn').addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+                document.getElementById('navLinks').classList.remove('active');
+                document.getElementById('mobileMenuBtn').classList.remove('active');
+            });
+        });
+
+        // Booking Modal Functions
+        let selectedSeats = [];
+        let currentConcert = {
+            name: '',
+            date: '',
+            venue: '',
+            basePrice: 0
+        };
+
+        function openBookingModal(concertName, date, venue, basePrice) {
+            currentConcert = { name: concertName, date: date, venue: venue, basePrice: basePrice };
+            document.getElementById('modalConcertName').textContent = concertName;
+            document.getElementById('modalConcertDetails').textContent = `${date} • ${venue}`;
+            document.getElementById('bookingModal').style.display = 'flex';
+            resetSeatSelection();
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+            resetSeatSelection();
+        }
+
+        function toggleSeat(seatElement, price) {
+            if (seatElement.classList.contains('taken')) return;
+            
+            seatElement.classList.toggle('selected');
+            const seatNumber = seatElement.textContent;
+            
+            if (seatElement.classList.contains('selected')) {
+                selectedSeats.push({ number: seatNumber, price: price });
+            } else {
+                selectedSeats = selectedSeats.filter(seat => seat.number !== seatNumber);
+            }
+            
+            updateSelectedSeatsDisplay();
+        }
+
+        function updateSelectedSeatsDisplay() {
+            const display = document.getElementById('selectedSeatsDisplay');
+            const totalPrice = document.getElementById('modalTotalPrice');
+            
+            if (selectedSeats.length === 0) {
+                display.textContent = 'None';
+                totalPrice.textContent = '$0';
+            } else {
+                display.textContent = selectedSeats.map(seat => seat.number).join(', ');
+                const total = selectedSeats.reduce((sum, seat) => sum + seat.price, 0);
+                totalPrice.textContent = `$${total}`;
+            }
+        }
+
+        function resetSeatSelection() {
+            selectedSeats = [];
+            document.querySelectorAll('.seat.selected').forEach(seat => {
+                seat.classList.remove('selected');
+            });
+            updateSelectedSeatsDisplay();
+        }
+
+        // Quick Booking Form
+        document.getElementById('quickBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const concert = document.getElementById('concert-select').value;
+            const quantity = document.getElementById('ticket-quantity').value;
+            const type = document.getElementById('ticket-type').value;
+            const name = document.getElementById('customer-name').value;
+            const email = document.getElementById('customer-email').value;
+            const phone = document.getElementById('customer-phone').value;
+            
+            // Show success message
+            showSuccessMessage(`Thank you ${name}! Your booking for ${quantity} ${type} ticket(s) has been received. Confirmation sent to ${email}.`);
+            
+            // Reset form
+            this.reset();
+            updateBookingSummary();
+        });
+
+        // Modal Booking Form
+        document.getElementById('modalBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (selectedSeats.length === 0) {
+                alert('Please select at least one seat.');
+                return;
+            }
+            
+            const name = document.getElementById('modal-name').value;
+            const email = document.getElementById('modal-email').value;
+            const phone = document.getElementById('modal-phone').value;
+            
+            closeBookingModal();
+            showSuccessMessage(`Thank you ${name}! Your seats ${selectedSeats.map(s => s.number).join(', ')} for ${currentConcert.name} have been reserved. Confirmation sent to ${email}.`);
+        });
+
+        function showSuccessMessage(message) {
+            document.getElementById('successMessage').textContent = message;
+            document.getElementById('successModal').style.display = 'flex';
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        // Update booking summary
+        function updateBookingSummary() {
+            const concertSelect = document.getElementById('concert-select');
+            const quantity = document.getElementById('ticket-quantity').value;
+            const type = document.getElementById('ticket-type').value;
+            
+            const concertText = concertSelect.options[concertSelect.selectedIndex].text;
+            const basePrice = parseInt(concertText.match(/\$(\d+)/)?.[1] || 0);
+            let multiplier = 1;
+            
+            if (type === 'vip') multiplier = 2.5;
+            else if (type === 'premium') multiplier = 1.5;
+            
+            const total = basePrice * quantity * multiplier;
+            
+            document.getElementById('summary-concert').textContent = concertText.split(' - ')[0];
+            document.getElementById('summary-tickets').textContent = quantity;
+            document.getElementById('summary-type').textContent = type.charAt(0).toUpperCase() + type.slice(1);
+            document.getElementById('summary-total').textContent = `$${total}`;
+        }
+
+        // Add event listeners for form updates
+        document.getElementById('concert-select').addEventListener('change', updateBookingSummary);
+        document.getElementById('ticket-quantity').addEventListener('input', updateBookingSummary);
+        document.getElementById('ticket-type').addEventListener('change', updateBookingSummary);
+
+        // Close modals on outside click
+        window.onclick = function(event) {
+            const bookingModal = document.getElementById('bookingModal');
+            const successModal = document.getElementById('successModal');
+            
+            if (event.target === bookingModal) {
+                closeBookingModal();
+            }
+            if (event.target === successModal) {
+                closeSuccessModal();
+            }
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Add animation classes to elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section, index) => {
+                if (section.id !== 'home') {
+                    section.classList.add('fade-in');
+                    observer.observe(section);
+                }
+            });
+
+            const concertCards = document.querySelectorAll('.concert-card');
+            concertCards.forEach((card, index) => {
+                card.classList.add('slide-in-left');
+                card.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(card);
+            });
+
+            const artistCards = document.querySelectorAll('.artist-card');
+            artistCards.forEach((card, index) => {
+                card.classList.add('slide-in-right');
+                card.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
